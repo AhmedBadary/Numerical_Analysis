@@ -2,8 +2,46 @@
 Implementations of various algorithms and methods in Numerical Analaysis
 
 ## 1. Newtons Method
+   Implements a function, **newton**, with signature\\
+   function [p] = newton(f,df,p0,tol)\\
+   that attempts to approximate a root **p**, where **|p_N - p_(N-1)| < ε**.\\
+   **df** is a function that returns **f′(x)**, and **ε = tol**.\\
+
+    Using the following strategy:   
+        1. Set i = 1.
+        2. While i ≤ N0 do Steps 3–6.
+            3. Set p = p0 − f(p0)/f'(p0). (Compute p_i.)
+            4. If | p − p0| < TOL then,
+                    OUTPUT (p); (The procedure was successful.)
+                    STOP.
+            5. Set i = i + 1.
+            6. Set p0 = p. (Update p0.)
+        7. OUTPUT (‘The method failed after N0 iterations, N0 =’, N0);
+            (The procedure was unsuccessful.)
+            STOP.
 
 ## 2. The Bisection Method
+   Implements a function, **bisection**, with signature\\
+   function [p] = bisection(f,a,b,tol,)\\
+   that attempts to approximate a root **p**, where **|p_N - p_(N-1)| < ε**.\\
+   **df** is a function that returns **f′(x)**, and **ε = tol**.\\
+
+    Using the following strategy:   
+        1. Set i = 1; 
+                FA = f(a).
+        2. While not converged do Steps 3–6.
+            3. Set p = a + (b − a)/2; (Compute pi.)
+                    FP = f ( p).
+            4. If FP = 0 or (b − a)/2 < TOL then
+                    OUTPUT (p); (Procedure completed successfully.)
+                    STOP.
+            5. Set i = i + 1.
+            6. If FA · FP > 0 then set a = p; (Compute ai, bi.)
+                    FA = FP
+               else set b = p. (FA is unchanged.)
+        7. OUTPUT (‘Method failed after N0 iterations, N0 =’, N0);
+                (The procedure was unsuccessful.)
+                STOP.
 
 ## 3. Newton-Bisection Method
    Implements a function, **newton_bisection**, with signature\\

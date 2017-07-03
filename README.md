@@ -6,7 +6,7 @@ Implementations of various algorithms and methods in Numerical Analaysis
 ## 2. The Bisection Method
 
 ## 3. Newton-Bisection Method
-   Implements a function, **newton_bisection**, with 
+   Implements a function, **newton_bisection**, with  
    signature: function [p] = newton_bisection(f,df,a,b,tol)  
    that attempts to approximate a root **p** ∈ **[a, b]**, with **|f(p)| < ε**.  
    **df** is a function that returns **f′(x)**, and **ε = tol**.  
@@ -27,7 +27,7 @@ Implementations of various algorithms and methods in Numerical Analaysis
                 return to step 2.
 
 ## 4. Find-Interval(Bracket) Method.
-   Implements a function **find_bracket** with 
+   Implements a function **find_bracket** with   
    signature: function [a,b] = find_bracket(f,x0,dx)  
    which  finds  an  interval  **[a, b]**  with  **sgn(f(a)) sgn(f(b)) < 0**  
    (i.e. f(a)  and f(b)  have opposite signs)  

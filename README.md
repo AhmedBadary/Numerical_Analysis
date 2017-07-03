@@ -2,10 +2,10 @@
 Implementations of various algorithms and methods in Numerical Analaysis
 
 ## 1. Newtons Method
-   Implements a function, **newton**, with signature\\
-   function [p] = newton(f,df,p0,tol)\\
-   that attempts to approximate a root **p**, where **|p_N - p_(N-1)| < ε**.\\
-   **df** is a function that returns **f′(x)**, and **ε = tol**.\\
+   Implements a function, **newton**, with signature  
+   function [p] = newton(f,df,p0,tol)  
+   that attempts to approximate a root **p**, where **|p_N - p_(N-1)| < ε**.  
+   **df** is a function that returns **f′(x)**, and **ε = tol**.  
 
     Using the following strategy:   
         1. Set i = 1.
@@ -21,10 +21,10 @@ Implementations of various algorithms and methods in Numerical Analaysis
             STOP.
 
 ## 2. The Bisection Method
-   Implements a function, **bisection**, with signature\\
-   function [p] = bisection(f,a,b,tol,)\\
-   that attempts to approximate a root **p**, where **|p_N - p_(N-1)| < ε**.\\
-   **df** is a function that returns **f′(x)**, and **ε = tol**.\\
+   Implements a function, **bisection**, with signature  
+   function [p] = bisection(f,a,b,tol,)  
+   that attempts to approximate a root **p**, where **|p_N - p_(N-1)| < ε**.  
+   **df** is a function that returns **f′(x)**, and **ε = tol**.  
 
     Using the following strategy:   
         1. Set i = 1; 

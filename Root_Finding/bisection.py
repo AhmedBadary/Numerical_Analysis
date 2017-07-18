@@ -19,7 +19,7 @@ def bisection(f, a, b, tol):
         iters += 1
         if (p-a) < tol:
             break
-        if sgn(f(a)) * sgn(f(p)) > 0:
+        if hf.sgn(f(a)) * hf.sgn(f(p)) > 0:
             a = p
         else:
             b = p
@@ -32,3 +32,12 @@ def bisection(f, a, b, tol):
     iters += 1
     print("Time: ", int((-st + ed)//60), "m + ", (((-st + ed)/60)%1)*60, "s")
     return p
+
+def fixed_pt_iter(f, p0, tol):
+    p = f(p0)
+    while 1:
+        p = f(p0)
+        if abs(p - p0) < tol:
+            return p
+        print(p)
+        p0 = p
